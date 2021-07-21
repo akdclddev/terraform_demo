@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   
 
     tags = {
-//        Name =format("${local.name}-${each.value}")
-      Name =format("${local.name}-${count.index + 1}")
+        Name =format("${local.name}-${each.value}")
+#       Name =format("${local.name}-${count.index + 1}")
   }
 }
