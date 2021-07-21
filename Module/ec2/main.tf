@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
-     count = length(local.azs)
+#      count = length(local.azs)
 //  count = 2
-//  for_each = toset(var.azs)
+  for_each = toset(var.azs)
   ami           = var.ami
   instance_type = "t2.micro"
 //  availability_zone = each.value
